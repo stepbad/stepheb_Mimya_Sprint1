@@ -1,0 +1,278 @@
+:root {
+  --dark-blue: #10286E;
+  --light-grey-1: #D9D9D9;
+  --light-grey-2: #B3B3B3;
+  --light-blue: #AEC3F7;
+  --black: #000000;
+  --white: #FFFFFF;
+  --description-color: #C76363;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.main-container {
+  max-width: 1200px;
+  width: 100%;
+  background-color: var(--white);
+  padding: 3rem;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+nav {
+  height: 70px;
+  font-size: 16pt;
+  width: 100%;
+  background-color: var(--white); 
+  color: var(--dark-blue); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav_logo img {
+  height: 50px;
+}
+
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav_links a {
+  display: inline-block;
+  background-color: var(--light-grey-2);
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.nav_links a:hover {
+  background-color: var(--light-blue);
+}
+
+.nav_order a {
+  display: inline-block;
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav_order a:hover {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+/* Carousel */
+#carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Keep items in a single row */
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+#carousel {
+  display: flex;
+  gap: 2rem;
+  min-width: max-content;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+#carousel::-webkit-scrollbar {
+  height: 10px;
+}
+
+#carousel::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 150px;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+/* Oval labels for name and price */
+.oval {
+  background-color: var(--light-grey-1); /* Light grey default background */
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: var(--dark-blue);
+  position: absolute;
+  top: -30px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.oval:hover {
+  background-color: var(--light-blue);
+}
+
+/* Add to Order button */
+.carousel-item button {
+  background-color: var(--light-blue);
+  color: var(--white);
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 30px; /* Oval shape */
+  cursor: pointer;
+  margin-top: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-item button:hover {
+  background-color: var(--light-grey-1);
+}
+
+/* Order Summary Section */
+#order-summary {
+  margin: 2rem 0;
+  background: linear-gradient(135deg, #B3B3B3, #D9D9D9); /* Light grey gradient */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+  color: #10286E;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #A3A3A3; /* Add subtle border */
+}
+
+#order-summary h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #10286E;
+}
+
+/* Order Items */
+#order-items {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #10286E;
+}
+
+#order-items .item-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  padding: 0.5rem 0;
+  align-items: center;
+  border-bottom: 1px solid var(--light-grey-2);
+}
+
+#order-items .item-name {
+  text-align: left;
+}
+
+#order-items .item-price {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  min-width: 80px;
+}
+
+/* Remove button styling */
+#order-items button {
+  background-color: #C76363;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  width: auto;
+}
+
+#order-items button:hover {
+  background-color: darkred;
+}
+
+/* Subtotal, HST, and Total Styling */
+.summary-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+
+#subtotal, #tax, #total {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  min-width: 100px;
+  display: inline-block;
+}
+
+/* Line before subtotal */
+#subtotal-line {
+  margin: 1rem 0;
+  border-bottom: 1px solid #10286E;
+}
+
+/* Line before total */
+#total-line {
+  margin-top: 1rem;
+  border-top: 1px solid #10286E;
+  padding-top: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #10286E;
+}
+
+/* Footer */
+footer {
+  background-color: var(--white);
+  color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}

@@ -1,0 +1,212 @@
+:root {
+  --dark-blue: #10286E;
+  --light-grey-1: #D9D9D9;
+  --light-grey-2: #B3B3B3;
+  --light-blue: #AEC3F7;
+  --black: #000000;
+  --white: #FFFFFF;
+  --description-color: #C76363;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.main-container {
+  max-width: 1200px;
+  width: 100%;
+  background-color: var(--white);
+  padding: 3rem;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+nav {
+  height: 100px;
+  font-size: 16pt;
+  width: 100%;
+  background-color: var(--white); 
+  color: var(--dark-blue); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav_logo img {
+  height: 100px; /* Set logo height to 100px */
+  object-fit: contain;
+}
+
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav_links a {
+  display: inline-block;
+  background-color: var(--light-grey-1); /* Light grey background */
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.nav_links a:hover {
+  background-color: var(--light-blue); 
+}
+
+.nav_order a {
+  display: inline-block;
+  background-color: var(--black); /* Black background */
+  color: var(--white); /* White text */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav_order a:hover {
+  background-color: var(--white); /* White background on hover */
+  color: var(--dark-blue); /* Dark blue text on hover */
+  border: 1px solid var(--dark-blue);
+}
+
+/* Carousel */
+#carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  margin-top: 2rem; /* Add spacing between the header and carousel */
+}
+
+#carousel {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  justify-content: center;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 150px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.carousel-item img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+/* Oval labels for name and price */
+.oval {
+  background-color: var(--light-grey-1); /* Default light grey background */
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: var(--dark-blue); /* Default dark blue text */
+  white-space: pre-line;
+  position: absolute;
+  top: -30px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.oval:hover {
+  background-color: var(--light-blue); /* Light blue on hover */
+  color: var(--white); /* White text on hover */
+}
+
+/* Details Section */
+#details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 100%;
+  margin: 2rem auto; /* Add spacing between carousel and details */
+}
+
+.food-image {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.food-description {
+  background: linear-gradient(to right, var(--light-grey-1), var(--light-grey-2));
+  padding: 2rem;
+  border-radius: 8px;
+  color: var(--description-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 2;
+}
+
+.food-description h2 {
+  font-size: 48px;
+  margin: 0 0 1rem;
+}
+
+.food-description p {
+  font-size: 32px;
+  margin: 0 0 1.5rem;
+  color: var(--description-color);
+}
+
+.price {
+  font-size: 64px;
+  font-weight: bold;
+  color: var(--description-color);
+  text-align: right;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--white);
+  color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
