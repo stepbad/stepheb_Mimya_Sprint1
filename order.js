@@ -1,5 +1,5 @@
 // Array of food items with image, name, and price
-const foodItems = [ 
+const foodItems = [
     { src: './images/gravy.webp', name: 'Gravy', price: 2.00 },
     { src: './images/coleslaw.webp', name: 'Coleslaw', price: 2.00 },
     { src: './images/mashedPotatoes.webp', name: 'Mashed Potatoes', price: 1.00 },
@@ -21,9 +21,9 @@ const carouselContainer = document.getElementById('carousel');
 
 // Function to populate the carousel dynamically based on the foodItems array
 function populateCarousel() {
-    const extraItemsStart = foodItems.slice(0, 5);  // First 5 items
-    const extraItemsEnd = foodItems.slice(-5);  // Last 5 items
-    const fullItems = [...extraItemsEnd, ...foodItems, ...extraItemsStart];  // Add first 5 at end and last 5 at start
+    const extraItemsStart = foodItems.slice(0, 6);  // First 6 items
+    const extraItemsEnd = foodItems.slice(-6);  // Last 6 items
+    const fullItems = [...extraItemsEnd, ...foodItems, ...extraItemsStart];  // Add first 6 at end and last 6 at start
 
     fullItems.forEach(item => {
         // Create a carousel item div

@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Page</title>
-    <link rel="stylesheet" href="order.css"> 
+    <link rel="stylesheet" href="order.css">
     <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-    <div class="main-container">
-        <!-- Navigation -->
-        <nav>
-            <div class="nav_logo">
-                <a href="./index.html">
-                    <img src="./images/logo1.jpg" alt="Logo" height="50">
-                </a>
-            </div>
-            <div class="nav_links">
-                <a href="./index.html">Home</a>
-                <a href="./menu.html">Menu</a>
-                <a href="./about.html">About</a>
-                <a href="./contact.html">Contact</a>
-            </div>
-            <div class="nav_order">
-                <a href="./order.html">Order</a>
-            </div>
-        </nav>
+    <main class="main-container">
+        <!-- Header with navigation -->
+        <header>
+            <nav>
+                <div class="nav_logo">
+                    <a href="./index.html">
+                        <img src="./images/logo1.jpg" alt="Logo" height="50">
+                    </a>
+                </div>
+                <div class="nav_links">
+                    <a href="./index.html">Home</a>
+                    <a href="./menu.html">Menu</a>
+                    <a href="./about.html">About</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+                <div class="nav_order">
+                    <a href="./order.html">Order</a>
+                </div>
+            </nav>
+        </header>
 
         <!-- Carousel Section -->
-        <section>
+        <section aria-label="Menu Items Carousel">
             <div id="carousel-container">
                 <div id="carousel">
                     <!-- Carousel items will be dynamically generated here by order.js -->
@@ -37,9 +39,9 @@
         </section>
 
         <!-- Order Summary Section -->
-        <section>
-            <div id="order-summary">
-                <h2>Your Order</h2>
+        <section aria-labelledby="order-summary-heading">
+            <article id="order-summary">
+                <h2 id="order-summary-heading">Your Order</h2>
                 <div id="order-items">
                     <!-- Dynamically added items will appear here -->
                 </div>
@@ -55,9 +57,29 @@
                     <span>Total:</span>
                     <span id="total">$0.00</span>
                 </div>
-            </div>
+            </article>
         </section>
-    </div>
+    </main>
+
+    <footer>
+        <div class="footerContent">
+            <div class="footerIcons">
+                <a href="http://www.linkedin.com" target="_blank">
+                    <img src="./images/64px-LinkedIn-Logo.png" alt="LinkedIn Logo" height="50">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="./images/64px-Logo_YouTube_(en_PNG).png" alt="YouTube Logo" height="50">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="./images/64px-X_Twitter_2.png" alt="Twitter Logo" height="50">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="./images/instagram_icon-icons.com_65586.png" alt="Instagram Logo" height="50">
+                </a>
+            </div>
+            <p>&copy; 2024 Gary Blue’s Diner. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="order.js"></script> <!-- Link to the JS file -->
 </body>

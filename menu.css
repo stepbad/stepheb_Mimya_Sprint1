@@ -210,3 +210,57 @@ footer {
   position: fixed;
   bottom: 0;
 }
+
+@media (max-width: 768px) {
+  nav {
+    padding: 5px;
+  }
+  .nav_logo img {
+    height: 50px;  /* Smaller logo on smaller screens */
+  }
+  .nav_links {
+      gap: 0.5rem;
+  }
+  .nav_links a, .nav_order a {
+    font-size: 16px;  /* Smaller font size for links */
+    padding: 5px 8px;  /* Smaller padding */
+  }
+
+ 
+  footer {
+      font-size: 8px;  /* Smaller font size */
+      padding: 5px;  /* Less padding */
+      text-align: center;
+  }
+
+  #details {
+      flex-direction: column;
+      align-items: center;
+  }
+  .food-image {
+      max-width: 100%;  /* Full width on smaller screens */
+      margin-bottom: 20px;  /* Add space between the image and description */
+  }
+  .food-description {
+      text-align: center;
+      font-size: 16px;  /* Smaller font size for descriptions */
+  }
+}
+
+.footerIcons {
+  display: flex;
+  justify-content: center; /* Centers the icons horizontally */
+  gap: 20px; /* Adds space between the icons */
+  margin-right: 40px;
+}
+
+.footerIcons a img {
+  height: 16px; /* Ensures that all icons are 30px in height */
+  width: auto; /* Maintains the aspect ratio of the icons */
+}
+.footerContent {
+  display: flex;
+  justify-content: space-between; /* Aligns items to opposite ends */
+  align-items:center;
+  padding: 0 20px; /* Adds padding to the left and right */
+}
