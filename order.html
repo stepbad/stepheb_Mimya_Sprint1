@@ -1,12 +1,19 @@
+<!--       This HTML file serves as the main interface for the user to register, sign in, and place food orders.
+group: Stephen Badcock and Mimya Hafiz
+Sprint 1 Oct 24.  -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Page</title>
-    <link rel="stylesheet" href="order.css">
+    <title>Order & Sign In</title>
     <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="joined.css">
 </head>
+
 <body>
     <main class="main-container">
         <!-- Header with navigation -->
@@ -29,11 +36,56 @@
             </nav>
         </header>
 
+        <!-- Sign In / Registration Section -->
+        <section aria-labelledby="auth-section-heading">
+            <h2 id="auth-section-heading">Register / Sign In</h2>
+            <div id="notify"></div>
+            <form id="form_reg">
+                <!-- Email Input -->
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="input-box" placeholder="Enter your Email">
+                </div>
+
+                <!-- Password Input -->
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="input-box" placeholder="Enter your Password">
+                </div>
+
+                <!-- Credit Card Information  -->
+                <div id="extra-fields" style="display: none;">
+                    <div class="form-row">
+                        <label for="creditCard">Credit Card</label>
+                        <input type="text" id="creditCard" name="creditCard" class="input-box" placeholder="Enter Credit Card Number">
+                    </div>
+
+                    <!-- Expiry Date -->
+                    <div class="form-row">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" name="expiry" class="input-box" placeholder="MM/YY">
+                    </div>
+
+                    <!-- CVV -->
+                    <div class="form-row">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" class="input-box" placeholder="Enter CVV">
+                    </div>
+                </div>
+
+                <!-- Register and Sign In Buttons -->
+                <div class="form-row_button">
+                    <button class="sign" style="display: block;">Sign in</button>
+                    <button class="register" style="display: block;">Register</button>
+                </div>
+            </form>
+        </section>
+
         <!-- Carousel Section -->
         <section aria-label="Menu Items Carousel">
             <div id="carousel-container">
                 <div id="carousel">
-                    <!-- Carousel items will be dynamically generated here by order.js -->
+                    <!-- Carousel items will be dynamically generated here -->
                 </div>
             </div>
         </section>
@@ -57,6 +109,7 @@
                     <span>Total:</span>
                     <span id="total">$0.00</span>
                 </div>
+                <button id="submitOrder" style="display:none;">Submit Order</button>
             </article>
         </section>
     </main>
@@ -64,23 +117,13 @@
     <footer>
         <div class="footerContent">
             <div class="footerIcons">
-                <a href="http://www.linkedin.com" target="_blank">
-                    <img src="./images/64px-LinkedIn-Logo.png" alt="LinkedIn Logo" height="50">
-                </a>
-                <a href="https://www.youtube.com" target="_blank">
-                    <img src="./images/64px-Logo_YouTube_(en_PNG).png" alt="YouTube Logo" height="50">
-                </a>
-                <a href="https://www.twitter.com" target="_blank">
-                    <img src="./images/64px-X_Twitter_2.png" alt="Twitter Logo" height="50">
-                </a>
-                <a href="https://www.instagram.com" target="_blank">
-                    <img src="./images/instagram_icon-icons.com_65586.png" alt="Instagram Logo" height="50">
-                </a>
+                <!-- Social media icons -->
             </div>
-            <p>&copy; 2024 Gary Blue’s Diner. All rights reserved.</p>
+            <p>&copy; 2024 Your Diner. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="order.js"></script>
+    <script src="joined.js"></script>
 </body>
+
 </html>
