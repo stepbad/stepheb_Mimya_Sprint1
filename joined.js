@@ -177,9 +177,14 @@ const foodItems = [
       }
 
       const email = currentUser.email;
-      const orderDetails = order.map(item => `${item.name}: $${item.price.toFixed(2)}`).join(', ');
-      const mailto = `mailto:stephen.badcock@keyin.com?subject=Order%20Details&body=User%20Email: ${email}%0AOrder: ${orderDetails}`;
-      window.location.href = mailto;
+const creditCard = currentUser.creditCard;
+const orderDetails = order.map(item => `${item.name}: $${item.price.toFixed(2)}`).join(', ');
+const totalAmount = document.getElementById("total").textContent;
+
+const mailto = `mailto:stephen.badcock@keyin.com?subject=Order%20Details&body=User%20Email: ${email}%0AOrder: ${orderDetails}%0ACredit Card: ${creditCard}%0ATotal: ${totalAmount}`;
+
+window.location.href = mailto;
+
   });
 
   // Add event listener to dynamically generated "Add to Order" buttons
