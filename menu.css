@@ -200,7 +200,7 @@ nav {
   text-align: right;
   margin-top: 1rem;
 }
-
+/* there was some kind of overflow issue that wouldn't allow the footer to behave correctly, I tried for hours to find it but just decided to do this instead */
 footer {
   left: 0;
   right: 0;
