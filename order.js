@@ -86,7 +86,7 @@ function removeFromOrder(index) {
 
 function displayOrderItems() {
     const orderList = document.querySelector("#order-items");
-    orderList.innerHTML = ''; // Clear existing items
+    orderList.innerHTML = ''; 
 
     // Add items to order list
     order.forEach((item, index) => {
